@@ -1,0 +1,8 @@
+{
+	"itemGroup.advancedtools.group": "Advanced Items",	
+	"block.advancedtools.silver_ore": "Silver Ore",
+	"block.advancedtools.gold_ore": "Gold Ore",
+	"item.advancedtools.custom_stone_plate": "Custom Stone Plate",
+	"item.advancedtools.silver_ingot": "Silver Ingot",
+	"item.advancedtools.example_sword": "Example Sword"
+}

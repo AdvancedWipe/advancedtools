@@ -1,0 +1,33 @@
+modLoader="javafml"
+loaderVersion="[35,)"
+issueTrackerURL="https://gitlab.com/advancedwipe/customblocks/-/issues"
+displayURL="https://hycrafthd.net"
+authors="Advancedwipe"
+license="All rights reserved"
+
+[[mods]]
+	modId="advancedtools"
+	version="${file.jarVersion}"
+	displayName="AdvancedItems Mod"
+	updateJSONURL="https://gitlab.com/advancedwipe/customblocks/-/tree/main"
+	displayURL="https://gitlab.com/advancedwipe/customblocks/-/tree/main"
+	logoFile="examplemod.png"
+	credits="Thanks for this mod goes to Java, Forge and Minecraft"
+
+	description='''
+		Hey das ist etwas TEXT!!!
+	'''
+	
+	[[dependencies.tutorialmod]]
+    	modId="forge" 
+    	mandatory=true
+   		versionRange="[35,)"
+    	ordering="NONE"
+    	side="BOTH"
+
+	[[dependencies.tutorialmod]]
+    	modId="minecraft"
+    	mandatory=true
+    	versionRange="[1.16.4,1.17)"
+    	ordering="NONE"
+    	side="BOTH"
