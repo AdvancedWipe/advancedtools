@@ -3,11 +3,14 @@ package com.github.advancedwipe.advancedtools;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import com.github.advancedwipe.advancedtools.setup.Registration;
-
+import com.github.advancedwipe.advancedtools.block.ATBlocks;
+import com.github.advancedwipe.advancedtools.item.ATItems;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 @Mod(value = AdvancedToolsMod.MODID)
 public class AdvancedToolsMod {
@@ -21,10 +24,19 @@ public class AdvancedToolsMod {
 private static final Logger LOGGER = LogManager.getLogger();
 	
 	public AdvancedToolsMod() {
-		Registration.register();
+		//Registration.register();
+		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
+		bus.addListener(this::setup);
+		
+		ATBlocks.BLOCKS.register(bus);
+		ATItems.ITEMS.register(bus);
 		
 		// Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
+	}
+	
+	private void setup(final FMLCommonSetupEvent event) {
+		
 	}
 
 	public static ResourceLocation prefix(String name) {

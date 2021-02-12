@@ -1,6 +1,6 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "advancedtools:items/elven_sword"
+    "layer0": "advancedtools:item/elven_sword"
   }
 }

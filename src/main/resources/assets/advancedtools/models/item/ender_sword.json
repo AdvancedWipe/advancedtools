@@ -1,6 +1,6 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "advancedtools:items/ender_sword"
+    "layer0": "advancedtools:item/ender_sword"
   }
 }

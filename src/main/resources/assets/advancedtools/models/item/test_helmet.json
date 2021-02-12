@@ -1,6 +1,6 @@
 {
 	"parent": "item/generated",
 	"textures": {
-		"layer0": "advancedtools:items/test_helmet"
+		"layer0": "advancedtools:item/test_helmet"
 	}
 }

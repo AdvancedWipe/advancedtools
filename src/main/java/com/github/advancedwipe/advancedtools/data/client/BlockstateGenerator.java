@@ -7,11 +7,10 @@ import net.minecraft.data.DataGenerator;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
-public class BlockstateGenerator extends BlockStateProvider{
+public class BlockstateGenerator extends BlockStateProvider {
 
 	public BlockstateGenerator(DataGenerator gen, ExistingFileHelper exFileHelper) {
 		super(gen, AdvancedToolsMod.MODID, exFileHelper);
-		// TODO Auto-generated constructor stub
 	}
 
 	@Override

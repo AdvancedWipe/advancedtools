@@ -8,6 +8,7 @@ import net.minecraft.data.BlockTagsProvider;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ITag;
+import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
 public class BlockTagGenerator extends BlockTagsProvider {
@@ -18,8 +19,10 @@ public class BlockTagGenerator extends BlockTagsProvider {
 		super(generatorIn, AdvancedToolsMod.MODID, existingFileHelper);
 	}
 	
+	@Override
 	protected void registerTags() {
 		getOrCreateBuilder(SILVER_ORE_TAG).add(ATBlocks.SILVER_ORE.get());
+		getOrCreateBuilder(Tags.Blocks.ORES).addTag(SILVER_ORE_TAG);
 		//getOrCreateBuilder(AIBlockTags.Blocks.ORES_ALUMINIUM).add(AIBlocks.ALUMINIUM_ORE.get());
 		//getOrCreateBuilder(Tags.Blocks.ORES).addTags(AIBlockTags.Blocks.ORES_SILVER);
 	}

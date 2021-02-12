@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "advancedtools:blocks/gold_ore"
+    "all": "advancedtools:block/silver_ore"
   }
 }

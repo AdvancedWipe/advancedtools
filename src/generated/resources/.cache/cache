@@ -1,0 +1,9 @@
+2ad39787bbd0eeb7e85598aae1e602fea853956d assets/advancedtools/blockstates/silver_ore.json
+c30ea7ec4f1c8858cba8794557a33b3cdb81cbb3 assets/advancedtools/models/block/silver_ore.json
+a9d4e33d0055f9d0f5d77b9b3eb242a89986705d assets/advancedtools/models/item/aluminium_ore.json
+4771f2800da2edaa243f0e05bbde2427c9b8d21d assets/advancedtools/models/item/silver_ingot.json
+ac6f3a9cf022a4a783699fd408b6739a42b9b80d assets/advancedtools/models/item/silver_ore.json
+e36f8fd3c6fe1a00eb510a34376ab50e4ce71bbc data/advancedtools/tags/blocks/silver_ore.json
+3d1b29ea4a9952a5dcbada0109fb8b02cd2f7e22 data/advancedtools/tags/items/silver_ore.json
+8c538e57b321dbed6cf11d46d43f5a9b7faa39bd data/forge/tags/blocks/ores.json
+8c538e57b321dbed6cf11d46d43f5a9b7faa39bd data/forge/tags/items/ores.json
