@@ -19,26 +19,26 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
 @OnlyIn(value = Dist.CLIENT, _interface = IRendersAsItem.class)
-public class EntityATHoneyBall extends ATEntityThrowable implements IRendersAsItem {
+public class EntityATTwilightWandBolt extends EntityATThrowable implements IRendersAsItem {
 	
-	public EntityATHoneyBall(EntityType<? extends EntityATHoneyBall> type, World world) {
+	// Following Code was copied from the TwilightForestMod for understanding the implementation of entities in Minecraft.
+
+	public EntityATTwilightWandBolt(EntityType<? extends EntityATTwilightWandBolt> type, World world) {
 		super(type, world);
 	}
 	
-	public EntityATHoneyBall( World world, LivingEntity thrower) {
-		super(ATEntities.honey_bolt,thrower, world);
+	public EntityATTwilightWandBolt(World world, LivingEntity thrower) {
+		super(ATEntities.wand_bolt, world, thrower);
 		func_234612_a_(thrower, thrower.rotationPitch, thrower.rotationYaw, 0, 1.5F, 1.0F);
 	}
-
-
+	
 	@Override
 	public void tick() {
 		super.tick();
 		makeTrail();
 	}
 
-	public void makeTrail() {
-		// by TF needs change
+	private void makeTrail() {
 		for (int i = 0; i < 5; i++) {
 			double dx = getPosX() + 0.5 * (rand.nextDouble() - rand.nextDouble());
 			double dy = getPosY() + 0.5 * (rand.nextDouble() - rand.nextDouble());
@@ -56,11 +56,10 @@ public class EntityATHoneyBall extends ATEntityThrowable implements IRendersAsIt
 	protected float getGravityVelocity() {
 		return 0.003F;
 	}
-	
+
 	@OnlyIn(Dist.CLIENT)
 	@Override
 	public void handleStatusUpdate(byte id) {
-		// by TF needs change
 		if (id == 3) {
 			IParticleData particle = new ItemParticleData(ParticleTypes.ITEM, new ItemStack(Items.ENDER_PEARL));
 			for (int i = 0; i < 8; i++) {
@@ -70,7 +69,7 @@ public class EntityATHoneyBall extends ATEntityThrowable implements IRendersAsIt
 			super.handleStatusUpdate(id);
 		}
 	}
-	
+
 	@Override
 	protected void onImpact(RayTraceResult result) {
 		if (!this.world.isRemote) {
@@ -84,7 +83,7 @@ public class EntityATHoneyBall extends ATEntityThrowable implements IRendersAsIt
 			this.remove();
 		}
 	}
-	
+
 	@Override
 	public boolean attackEntityFrom(DamageSource source, float amount) {
 		super.attackEntityFrom(source, amount);
@@ -102,13 +101,10 @@ public class EntityATHoneyBall extends ATEntityThrowable implements IRendersAsIt
 
 		return false;
 	}
-	
-	public ItemStack getItem() {
-		return new ItemStack(Items.ENDER_PEARL);
-	}
-	
-	
-	
-	
 
+	@Override
+	public ItemStack getItem() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

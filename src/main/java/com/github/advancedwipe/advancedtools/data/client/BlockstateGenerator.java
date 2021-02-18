@@ -15,7 +15,11 @@ public class BlockstateGenerator extends BlockStateProvider {
 
 	@Override
 	protected void registerStatesAndModels() {
-		simpleBlock(ATBlocks.SILVER_ORE.get());
+		simpleBlock(ATBlocks.silver_ore.get());
+		//simpleBlock(ATBlocks.silver_ore.get());
+		simpleBlock(ATBlocks.ruby_ore.get());
+		simpleBlock(ATBlocks.kyanite_ore.get());
+		//simpleBlock(ATBlocks.silver_ore.get());
 		
 	}
 

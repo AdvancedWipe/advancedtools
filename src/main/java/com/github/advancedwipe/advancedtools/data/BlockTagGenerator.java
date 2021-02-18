@@ -21,7 +21,7 @@ public class BlockTagGenerator extends BlockTagsProvider {
 	
 	@Override
 	protected void registerTags() {
-		getOrCreateBuilder(SILVER_ORE_TAG).add(ATBlocks.SILVER_ORE.get());
+		getOrCreateBuilder(SILVER_ORE_TAG).add(ATBlocks.silver_ore.get());
 		getOrCreateBuilder(Tags.Blocks.ORES).addTag(SILVER_ORE_TAG);
 		//getOrCreateBuilder(AIBlockTags.Blocks.ORES_ALUMINIUM).add(AIBlocks.ALUMINIUM_ORE.get());
 		//getOrCreateBuilder(Tags.Blocks.ORES).addTags(AIBlockTags.Blocks.ORES_SILVER);
