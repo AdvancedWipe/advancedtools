@@ -1,7 +1,10 @@
 package com.github.advancedwipe.advancedtools.data.client;
 
+import org.apache.commons.io.filefilter.PrefixFileFilter;
+
 import com.github.advancedwipe.advancedtools.AdvancedToolsMod;
 import com.github.advancedwipe.advancedtools.block.ATBlocks;
+import com.github.advancedwipe.advancedtools.item.ATItems;
 
 import net.minecraft.block.Block;
 import net.minecraft.data.DataGenerator;
@@ -22,10 +25,13 @@ public class ItemModelGenerator extends ItemModelProvider {
 		//withExistingParent("silver_block", modLoc("block/silver_block"));
 		withExistingParent("silver_ore", modLoc("block/silver_ore"));
 		toBlock(ATBlocks.aluminium_ore.get());
+		toBlock(ATBlocks.ruby_ore.get());
+		//generated(ATBlocks.ruby_ore.getId().getPath(), AdvancedToolsMod.prefix("block/ruby_ore"));
+		generated(ATItems.SILVER_INGOT.getId().getPath(), AdvancedToolsMod.prefix("item/silver_ingot"));
 		
-		ModelFile itemGenerated = getExistingFile(mcLoc("item/generated"));
-		
-		builder(itemGenerated, "silver_ingot");
+//		ModelFile itemGenerated = getExistingFile(mcLoc("item/generated"));
+//		
+//		builder(itemGenerated, "silver_ingot");
 		
 	}
 	
@@ -50,10 +56,10 @@ public class ItemModelGenerator extends ItemModelProvider {
 		withExistingParent(block.getRegistryName().getPath(), model);
 	}
 
-	private ItemModelBuilder builder(ModelFile itemGenerated, String string) {
-		return getBuilder("silver_ingot").parent(itemGenerated).texture("layer0", "item/" + "silver_ingot");
-		
-	}
+//	private ItemModelBuilder builder(ModelFile itemGenerated, String string) {
+//		return getBuilder("silver_ingot").parent(itemGenerated).texture("layer0", "item/" + "silver_ingot");
+//		
+//	}
 	
 	@Override
 	public String getName() {

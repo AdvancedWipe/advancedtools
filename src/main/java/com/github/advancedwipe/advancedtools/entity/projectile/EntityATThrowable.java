@@ -7,23 +7,24 @@ import net.minecraft.network.IPacket;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.network.NetworkHooks;
 
-public abstract class ATEntityThrowable extends ThrowableEntity {
+public class EntityATThrowable extends ThrowableEntity {
+	
+	// Following Code was copied from the TwilightForestMod for understanding the implementation of entities in Minecraft.
 
-	public ATEntityThrowable(EntityType<? extends ATEntityThrowable> type, World worldIn) {
+	public EntityATThrowable(EntityType<? extends EntityATThrowable> type, World worldIn) {
 		super(type, worldIn);
 	}
-	
-	public ATEntityThrowable(EntityType<? extends ATEntityThrowable> type, double x, double y, double z, World worldIn) {
+
+	public EntityATThrowable(EntityType<? extends EntityATThrowable> type, World worldIn, double x, double y, double z) {
 		super(type, x, y, z, worldIn);
 	}
-
-	public ATEntityThrowable(EntityType<? extends ATEntityThrowable> type, LivingEntity throwerIn, World worldIn) {
+	
+	public EntityATThrowable(EntityType<? extends EntityATThrowable> type, World worldIn, LivingEntity throwerIn) {
 		super(type, throwerIn, worldIn);
 	}
 
 	@Override
-	protected void registerData() {
-		
+	protected void registerData() {		
 	}
 	
 	@Override

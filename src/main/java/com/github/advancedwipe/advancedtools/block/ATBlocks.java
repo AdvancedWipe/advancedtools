@@ -15,10 +15,10 @@ import net.minecraftforge.registries.ForgeRegistries;
 public class ATBlocks {
 	public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, AdvancedToolsMod.MODID);
 	
-	public static final RegistryObject<Block> SILVER_ORE = BLOCKS.register("silver_ore", () -> new Block(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.BLUE).hardnessAndResistance(3, 10).harvestLevel(2).harvestTool(ToolType.PICKAXE).sound(SoundType.STONE)));
+	public static final RegistryObject<Block> silver_ore = BLOCKS.register("silver_ore", () -> new Block(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.BLUE).hardnessAndResistance(3, 10).harvestLevel(2).harvestTool(ToolType.PICKAXE).sound(SoundType.STONE)));
 	public static final RegistryObject<Block> aluminium_ore = BLOCKS.register("aluminium_ore", () -> new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(3, 10).harvestLevel(2).sound(SoundType.STONE)));
-	public static final RegistryObject<Block> RUBY_ORE = BLOCKS.register("ruby_ore", () -> new Block(AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(3, 10).harvestLevel(2).sound(SoundType.STONE)));
-	public static final RegistryObject<Block> KYANITE_ORE = BLOCKS.register("kyanite_ore", () -> new Block(AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(3, 10).harvestLevel(2).sound(SoundType.STONE)));
+	public static final RegistryObject<Block> ruby_ore = BLOCKS.register("ruby_ore", () -> new Block(AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(3, 10).harvestLevel(2).sound(SoundType.STONE)));
+	public static final RegistryObject<Block> kyanite_ore = BLOCKS.register("kyanite_ore", () -> new Block(AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(3, 10).harvestLevel(2).sound(SoundType.STONE)));
 	public static final RegistryObject<Block> ANATAS_ORE = BLOCKS.register("anatas_ore", () -> new Block(AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(3, 10).harvestLevel(2).sound(SoundType.STONE)));
 	public static final RegistryObject<Block> BROOKIT_ORE = BLOCKS.register("brookit_ore", () -> new Block(AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(3, 10).harvestLevel(2).sound(SoundType.STONE)));
 		

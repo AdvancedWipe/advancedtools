@@ -18,6 +18,7 @@ import net.minecraft.item.BlockItem;
 import net.minecraft.item.HoeItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.PickaxeItem;
+import net.minecraft.item.Rarity;
 import net.minecraft.item.ShovelItem;
 import net.minecraft.item.SwordItem;
 import net.minecraftforge.fml.RegistryObject;
@@ -33,7 +34,10 @@ public class ATItems {
 //		public static final RegistryObject<BowItem> SNOW_BOW = Registration.ITEMS.register("snow_bow",
 //				() -> new AngelItem(new Item.Properties().group(AdvancedItemGroups.GROUP)));
 //	 	1.17 gives player hit by arrow freez effect
+	public static Item tutorial_entity_egg;
 	
+	public static final RegistryObject<Item> twilight_scepter = ITEMS.register("twilight_scepter", () -> new ATTwilightWandItem(defaultBuilder().maxDamage(99).rarity(Rarity.UNCOMMON)));
+//	
 	// ITEMS
 	public static final RegistryObject<Item> SILVER_INGOT = ITEMS.register("silver_ingot", () -> new Item(new Item.Properties().group(ItemGroups.ITEM_GROUP)));
 	public static final RegistryObject<Item> SILVER_COIN = ITEMS.register("silver_coin", () -> new Item(new Item.Properties().group(ItemGroups.ITEM_GROUP)));
@@ -54,8 +58,7 @@ public class ATItems {
 	public static final RegistryObject<Item> BROOKIT_CRYSTAL = ITEMS.register("brookit", () -> new Item(new Item.Properties().group(ItemGroups.ITEM_GROUP)));
 	
 	
-	public static final RegistryObject<Item> ADVANCED_ITEM = ITEMS.register("advanced_item", 
-			() -> new SpecialItem(new Item.Properties().group(ItemGroups.ITEM_GROUP)));
+	public static final RegistryObject<Item> ADVANCED_ITEM = ITEMS.register("advanced_item", () -> new SpecialItem(new Item.Properties().group(ItemGroups.ITEM_GROUP)));
 	
 // TOOLS
 	// ANGEL
@@ -111,8 +114,12 @@ public class ATItems {
 			() -> new ArmorItem(AdvancedArmorMaterial.TEST,EquipmentSlotType.FEET, new Item.Properties().group(ItemGroups.EQUIP_GROUP)));
 	
 	// Block Items
-	public static final RegistryObject<BlockItem> SILVER_ORE = ITEMS.register("silver_ore", () -> new BlockItem(ATBlocks.SILVER_ORE.get(), new Item.Properties().group(ItemGroups.BLOCK_GROUP)));
+	public static final RegistryObject<BlockItem> SILVER_ORE = ITEMS.register("silver_ore", () -> new BlockItem(ATBlocks.silver_ore.get(), new Item.Properties().group(ItemGroups.BLOCK_GROUP)));
 
+	public static Item.Properties defaultBuilder() {
+		return new Item.Properties().group(ItemGroups.ITEM_GROUP);
+	}
+	
 	public static void register() {
 		
 	}

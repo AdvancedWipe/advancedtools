@@ -14,12 +14,14 @@ public final class DataGenerators {
 	
 	@SubscribeEvent
 	public static void gatherData(GatherDataEvent evt) {
-		// Got the idea to do it like this from twilightforest mod
+		// BlockStateGenerator must be called at first, otherwise it won't work (so you have to create the blockstates manully, what makes no sense
+		evt.getGenerator().addProvider(new BlockstateGenerator(evt.getGenerator(), evt.getExistingFileHelper()));
+		evt.getGenerator().addProvider(new ItemModelGenerator(evt.getGenerator(), evt.getExistingFileHelper()));
         BlockTagsProvider blocktags = new BlockTagGenerator(evt.getGenerator(), evt.getExistingFileHelper());
         evt.getGenerator().addProvider(blocktags);
         evt.getGenerator().addProvider(new ItemTagGenerator(evt.getGenerator(), blocktags, evt.getExistingFileHelper()));
-        evt.getGenerator().addProvider(new BlockstateGenerator(evt.getGenerator(), evt.getExistingFileHelper()));
-        evt.getGenerator().addProvider(new ItemModelGenerator(evt.getGenerator(), evt.getExistingFileHelper()));
+        
+        
 	}
 	
 }
